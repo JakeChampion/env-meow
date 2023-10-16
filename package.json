@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@fastly/js-compute": "^3.6.2",
+    "crypto": "npm:crypto-browserify@^3.12.0",
+    "dotenv": "^16.3.1",
+    "os": "npm:os-browserify@^0.3.0",
+    "path": "^0.12.7",
+    "process": "^0.11.10",
+    "stream": "npm:stream-browserify@^3.0.0"
+  },
+  "scripts": {
+    "build": "export MEOW=\"woof\"; js-compute-runtime ./src/index.js ./bin/main.wasm",
+    "deploy": "fastly compute publish"
+  }
+}
